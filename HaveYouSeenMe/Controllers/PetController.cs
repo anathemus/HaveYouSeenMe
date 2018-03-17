@@ -16,5 +16,30 @@ namespace HaveYouSeenMe.Controllers
             return View();
         }
 
+        /*public ActionResult Display()
+        {
+
+            var name = (string)RouteData.Values["id"];
+
+            var model = PetManagement.GetByName(name);
+
+            if (model == null)
+
+                return RedirectToAction("NotFound");
+
+            return View(model);
+
+        }
+        */
+
+        public ActionResult NotFound()
+        {
+
+            return View();
+
+        }
+
+
+
     }
 }
