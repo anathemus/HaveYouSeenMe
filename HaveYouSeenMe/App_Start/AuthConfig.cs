@@ -22,9 +22,9 @@ namespace HaveYouSeenMe
             //    consumerKey: "",
             //    consumerSecret: "");
 
-            //OAuthWebSecurity.RegisterFacebookClient(
-            //    appId: "",
-            //    appSecret: "");
+            OAuthWebSecurity.RegisterFacebookClient(
+                appId: "1",
+                appSecret: "1");
 
             //OAuthWebSecurity.RegisterGoogleClient();
         }

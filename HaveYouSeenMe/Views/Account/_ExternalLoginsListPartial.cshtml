@@ -18,6 +18,7 @@ else
         @foreach (AuthenticationClientData p in Model)
         {
             <button type="submit" name="provider" value="@p.AuthenticationClient.ProviderName" title="Log in using your @p.DisplayName account">@p.DisplayName</button>
+            <p>@p.AuthenticationClient</p><p>@p.AuthenticationClient.ProviderName</p>
         }
         </p>
     </fieldset>

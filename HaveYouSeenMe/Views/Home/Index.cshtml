@@ -18,6 +18,19 @@
         </div>
     </section>
 }
+
+@model ICollection<AuthenticationClientData>
+@Context.
+@if (Model != null)
+{
+        foreach (AuthenticationClientData data in Model)
+    {
+        <p>@data.DisplayName</p>
+        <p>@data.AuthenticationClient.ProviderName</p>
+        <p>@data.AuthenticationClient</p>
+    }
+}
+
 <h3>We suggest the following:</h3>
 <ol class="round">
     <li class="one">

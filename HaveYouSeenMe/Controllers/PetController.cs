@@ -31,6 +31,15 @@ namespace HaveYouSeenMe.Controllers
 
         }
         */
+        public ActionResult ShowError()
+        {
+            ViewData["ErrorCode"] = 12345;
+            ViewData["ErrorDescription"] = "Something bad happened";
+            ViewData["ErrorDate"] = DateTime.Now;
+            ViewData["Exception"] = new Exception();
+
+            return View();
+        }
 
         public ActionResult NotFound()
         {
@@ -39,7 +48,18 @@ namespace HaveYouSeenMe.Controllers
 
         }
 
+        public FileResult DownloadPetPicture()
+        {
+            var name = (string)RouteData.Values["id"];
+            var picture = "/Content/Uploads/" + name + ".jpg";
+            var contentType = "image/jpg";
+            // var fileName = name + ".jpg";
+            return File(picture, contentType);
+        }
 
-
+        public ActionResult NotFoundError() 
+        {
+            return HttpNotFound("Nothing here...");
+        }
     }
 }
