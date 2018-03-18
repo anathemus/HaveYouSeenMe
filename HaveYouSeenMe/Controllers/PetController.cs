@@ -46,7 +46,7 @@ namespace HaveYouSeenMe.Controllers
             if (model.PictureFile.ContentLength > 0)    
             {        
                 var fileName = Path.GetFileName(model.PictureFile.FileName);        
-                var filePath = Server.MapPath(“/Content/Uploads”);        
+                var filePath = Server.MapPath("~/Content/Uploads");        
                 string savedFileName = Path.Combine(filePath, fileName);        
                 model.PictureFile.SaveAs(savedFileName);        
                 PetManagement.CreateThumbnail(fileName, filePath, 100, 100, true);    
@@ -71,6 +71,13 @@ namespace HaveYouSeenMe.Controllers
 
             return View();
 
+        }
+
+        [AllowAnonymous] 
+        public ActionResult GetPet(int id) 
+        {     
+            // code here
+            return View(id);
         }
 
         public FileResult DownloadPetPicture()
