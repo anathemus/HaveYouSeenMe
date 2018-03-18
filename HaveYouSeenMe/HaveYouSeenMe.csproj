@@ -171,6 +171,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountModels.cs" />
+    <Compile Include="Models\Business\PetManagement.cs" />
     <Compile Include="Models\DataModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -198,6 +199,7 @@
     <Compile Include="Models\PetType.cs">
       <DependentUpon>DataModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\PictureModel.cs" />
     <Compile Include="Models\Setting.cs">
       <DependentUpon>DataModel.tt</DependentUpon>
     </Compile>
@@ -353,12 +355,16 @@
     <Content Include="Views\Pet\Index.cshtml" />
     <Content Include="Views\Pet\NotFound.cshtml" />
     <Content Include="Views\Pet\ShowError.cshtml" />
+    <Content Include="Views\Pet\PictureUpload.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Content\Uploads\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

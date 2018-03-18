@@ -286,7 +286,7 @@
           <Property Name="UserId" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Status" Relationship="Model.FK_Pet_Status" FromRole="Pet" ToRole="Status" />
           <NavigationProperty Name="UserProfile" Relationship="Model.FK_Pet_User" FromRole="Pet" ToRole="UserProfile" />
-          <NavigationProperty Name="PetPhotoes" Relationship="Model.FK_PetPhoto_Pet" FromRole="Pet" ToRole="PetPhoto" />
+          <NavigationProperty Name="PetPhotos" Relationship="Model.FK_PetPhoto_Pet" FromRole="Pet" ToRole="PetPhoto" />
         </EntityType>
         <EntityType Name="PetPhoto">
           <Key>

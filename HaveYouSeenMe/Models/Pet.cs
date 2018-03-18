@@ -16,7 +16,7 @@ namespace HaveYouSeenMe.Models
     {
         public Pet()
         {
-            this.PetPhotoes = new HashSet<PetPhoto>();
+            this.PetPhotos = new HashSet<PetPhoto>();
         }
     
         public int PetID { get; set; }
@@ -31,6 +31,6 @@ namespace HaveYouSeenMe.Models
     
         public virtual Status Status { get; set; }
         public virtual UserProfile UserProfile { get; set; }
-        public virtual ICollection<PetPhoto> PetPhotoes { get; set; }
+        public virtual ICollection<PetPhoto> PetPhotos { get; set; }
     }
 }

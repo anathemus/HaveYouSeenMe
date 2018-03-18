@@ -27,7 +27,7 @@ namespace HaveYouSeenMe.Models
     
         public DbSet<Message> Messages { get; set; }
         public DbSet<Pet> Pets { get; set; }
-        public DbSet<PetPhoto> PetPhotoes { get; set; }
+        public DbSet<PetPhoto> PetPhotos { get; set; }
         public DbSet<PetType> PetTypes { get; set; }
         public DbSet<Setting> Settings { get; set; }
         public DbSet<Status> Status { get; set; }
